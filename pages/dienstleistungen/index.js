@@ -107,9 +107,9 @@ export default function Dienstleistungen({ angebote }) {
                                     <img src={`${IMAGE_URL}${angebot.thumbnail.url}`} className="service-image" />
                                     <p>{angebot.untertitel}</p>
                                     <p>{angebot.text}</p>
-                                    <Link href='/dienstleistungen/[slug]' as={`/dienstleistungen/${angebot.slug}`}>
+                                    {/* <Link href='/dienstleistungen/[slug]' as={`/dienstleistungen/${angebot.slug}`}>
                                         <a className="bilder">Bilder</a>
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             </div>
                         )
@@ -129,9 +129,9 @@ export default function Dienstleistungen({ angebote }) {
                                         <img src={`${IMAGE_URL}${angebot.thumbnail.url}`} className="service-image" />
                                         <p>{angebot.untertitel}</p>
                                         <p>{angebot.text}</p>
-                                        <Link href='/dienstleistungen/[slug]' as={`/dienstleistungen/${angebot.slug}`}>
+                                        {/* <Link href='/dienstleistungen/[slug]' as={`/dienstleistungen/${angebot.slug}`}>
                                             <a className="bilder">Bilder</a>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                     <div className="col-xs-12 col-md-6 subcontainer-service">
                                         <h1 className="number right">0{angebot.nummer}</h1>
@@ -149,9 +149,9 @@ export default function Dienstleistungen({ angebote }) {
                                     <img src={`${IMAGE_URL}${angebot.thumbnail.url}`} className="service-image" />
                                     <p>{angebot.untertitel}</p>
                                     <p>{angebot.text}</p>
-                                    <Link href='/dienstleistungen/[slug]' as={`/dienstleistungen/${angebot.slug}`}>
+                                    {/* <Link href='/dienstleistungen/[slug]' as={`/dienstleistungen/${angebot.slug}`}>
                                         <a className="bilder">Bilder</a>
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             </div>
                             )
