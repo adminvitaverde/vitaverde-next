@@ -7,12 +7,12 @@ export default async (req, res) => {
 
             // create reusable transporter object using the default SMTP transport
             let transporter = nodemailer.createTransport({
-                host: "smtp.ethereal.email", // z.B. mail.infomaniak.com
+                host: "smtp-pro.vtx.ch", // z.B. mail.infomaniak.com
                 port: 587,
                 secure: false, // true for 465, false for other ports
                 auth: {
-                    user: "leanna.borer@ethereal.email", // generated ethereal user, z.B. admin@plankraft.ch, process.env.MAIL_USER
-                    pass: "hkAqXDv9g79NKC1ZBf", // generated ethereal password, z.B. passwordAdmin, process.env.MAIL_PASS gi
+                    user: process.env.MAIL_USER, // generated ethereal user, z.B. admin@plankraft.ch, process.env.MAIL_USER
+                    pass: process.env.MAIL_PASS, // generated ethereal password, z.B. passwordAdmin, process.env.MAIL_PASS gi
                 },
             });
 
