@@ -1,0 +1,882 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat Regular', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('/fonts/Montserrat-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url('/fonts/Montserrat-SemiBold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('/fonts/Montserrat-Medium.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('/fonts/Montserrat-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**********
+Inhaltsverzeichnis
+
+1. Generell
+2. Buttons
+3. Navigation
+4. Section
+5. Landing
+6. Services
+
+**********/
+
+/****
+1. Generell
+*****/
+
+/* Usage font-size: body bestimmt Pixelgrösse - alles andere mit % angeben. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Montserrat Regular', sans-serif;
+}
+
+main {
+  overflow: hidden;
+}
+
+/*Whitespace*/
+
+.whitespace-top-30 {
+  padding-top: 30px;
+}
+
+.whitespace-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.whitespace-bottom-60 {
+  padding-bottom: 60px;
+}
+
+.whitespace-bottom-100 {
+  padding-bottom: 100px;
+}
+
+.whitespace-top-bottom-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*Text*/
+
+.text-justify {
+  text-align: justify;
+}
+
+/****
+2. Buttons
+*****/
+
+.btn-2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 80%;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.btn-2-symbol {
+  width: 4%;
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 120%;
+    letter-spacing: 4px;
+  }
+
+  .btn-2-symbol {
+    width: 4%;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+/****
+3. Navigation
+*****/
+
+/* CSN2: Navigation 2 Transparent Line-Bottom */
+
+/* CHANGES IN BOOTSTRAP */
+
+.csn2 {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+}
+
+.csn2.scrolled {
+  background-color: white;
+  border-bottom: 1px solid white;
+}
+
+.csn2 {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+}
+
+.csn2-logo {
+  width: 125px;
+}
+
+.csn2-nav-link {
+  color: white;
+}
+
+.csn2-nav-link.scrolled {
+  color: black !important;
+}
+
+.csn2-nav-link.scrolled {
+  color: black !important;
+  margin-left: 40px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.csn2-nav-link:hover {
+  letter-spacing: 2px;
+}
+
+.csn2-dropdown-menu {
+  background-color: transparent !important;
+}
+
+.csn2-dropdown-item {
+  color: white !important;
+}
+
+.logo {
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .csn2 {
+    background-color: white;
+  }
+
+  .csn2-nav-link {
+    margin: auto;
+  }
+}
+
+/****
+4. Section
+*****/
+
+/* CSSE1: Standard */
+
+.csse1-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: white;
+}
+
+.csse1-section-150 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: white;
+}
+
+.csse1-section-150-gray {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: lightgray;
+}
+
+.csse1-section-grey {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f1f1f1;
+}
+
+.csse2-section {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background: url(/img/background-service.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.csse2-section-2 {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background: url(/img/background-service.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.vv-service-subtitle {
+  text-transform: uppercase;
+  font-family: 'Montserrat Regular';
+  font-weight: 400;
+  font-size: 135%;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.vv-service-title {
+  text-transform: uppercase;
+  font-family: 'Montserrat Bold';
+  font-weight: 700;
+  font-size: 200%;
+  letter-spacing: 17.5px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .vv-service-subtitle {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 200%;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .vv-service-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 500%;
+    letter-spacing: 30px;
+  }
+
+  .csse2-section {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    background: url(/img/background-service.jpg) no-repeat center;
+    background-size: contain;
+  }
+
+  .csse2-section-2 {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    background: url(/img/background-service.jpg) no-repeat center;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .vv-service-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 500%;
+    letter-spacing: 100px;
+    padding-left: 6%;
+  }
+}
+
+
+
+
+
+/****
+5. Landing
+*****/
+
+/* CSL2: Landing Page Parallax Black Overlay */
+
+.csl2-intro {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background: url(/img/bg-garten-ueberuns-laufen.jpg) no-repeat 50% 50% fixed;
+  display: table;
+  top: 0;
+  background-size: cover;
+  height: 100vh;
+}
+
+.service {
+  background-image: url(/img/bg-garten-ueberuns-laufen.jpg);
+}
+
+.about {
+  background-image: url(/img/bg-garten-ueberuns-laufen.jpg);
+}
+
+.team-inner {
+  background-image: url(/img/bg-garten-team-laufen.jpg);
+}
+
+.csl2-intro .csl2-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+  background-color: rgba(0, 81, 67, 0.7);
+}
+
+.csl2-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.csl2-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #f9f3f4;
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+.vv-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 120%;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 768px) {
+  .service {
+    background-image: url(/img/bg-garten-ueberuns-laufen.jpg);
+  }
+
+  .about {
+    background-image: url(/img/bg-garten-ueberuns-laufen.jpg);
+  }
+
+  .team-inner {
+    background-image: url(/img/bg-garten-team-laufen.jpg);
+  }
+
+  #button-bigger {
+    font-size: 130%;
+  }
+
+  #garden-bigger {
+    font-size: 260%;
+  }
+}
+
+/* CSL3: Landing Page Slider*/
+
+slider {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  overflow: hidden;
+  position: relative;
+}
+
+slider > * {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: red;
+  -webkit-animation: slide 12s infinite;
+  animation: slide 12s infinite;
+  overflow: hidden;
+}
+
+slide:nth-child(1) {
+  left: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+  background-image: url(/img/background-service.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(2) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  background-image: url(/img/background-service.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(3) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  background-image: url(/img/background-csl1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(4) {
+  left: 0;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+  background-image: url(/img/background-csl1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+slide p {
+  font-size: 70px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-top: 340px;
+  color: white;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: 100%;
+    width: 100%;
+  }
+  5% {
+    left: 0%;
+  }
+  25% {
+    left: 0%;
+  }
+  30% {
+    left: -100%;
+    width: 100%;
+  }
+  30.001% {
+    left: -100%;
+    width: 0%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 100%;
+    width: 100%;
+  }
+  5% {
+    left: 0%;
+  }
+  25% {
+    left: 0%;
+  }
+  30% {
+    left: -100%;
+    width: 100%;
+  }
+  30.001% {
+    left: -100%;
+    width: 0%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+/****
+6. Service
+*****/
+
+/* CSS3: Service Page About */
+
+.css3-img {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.css3-subtitle {
+  font-weight: 500;
+  font-size: 120%;
+  color: #005143;
+}
+
+.vv-title-hello {
+  text-transform: uppercase;
+  font-size: 150%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.vv-text-hello {
+  font-size: 85%;
+  font-weight: 300;
+}
+
+.vv-service-link:hover {
+  text-decoration: none;
+}
+
+.vv-service-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #8cbd22;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.vv-service-link:hover::after {
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+/****
+7. Blog
+*****/
+
+/* CSB1: Blog Page Quadrat */
+
+.csb1-thumbnail {
+  width: 100%;
+}
+
+.resize {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 300px;
+}
+
+.csb1-date-nu {
+  position: absolute;
+  font-size: 70px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  color: lightgray;
+  font-weight: 600;
+}
+
+.csb1-date {
+  height: 110px;
+}
+
+.csb1-date-mo {
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  top: 37px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  color: #005143;
+  font-weight: 400;
+}
+
+.csb1-title {
+  font-size: 110%;
+  font-weight: 600;
+}
+
+.csb1-text {
+  font-size: 90%;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.blog-nonews {
+  font-size: 90%;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/*TEAM*/
+
+.img-team {
+  width: 75%;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  border: 5px solid lightgray;
+}
+
+.img-team-bottom {
+  margin-bottom: 2.5px;
+}
+
+.team div a {
+  color: black;
+}
+
+.team div a::hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .img-margin-bottom {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #familienunternehmen {
+    font-size: 35%;
+  }
+
+  #traumgarten {
+    font-size: 160%;
+  }
+}
+
+/*Kontakt*/
+
+form input {
+  margin-bottom: 10px;
+  width: 75%;
+  padding-left: 10px;
+}
+
+form textarea {
+  margin-bottom: 10px;
+  width: 75%;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+#submit {
+  padding-left: 0;
+  background-color: #005143;
+  color: white;
+  border: 1px solid #005143;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.vv-link-clean {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.vv-link-clean-single {
+  text-decoration: none;
+  color: black;
+}
+
+.vv-link-clean:hover {
+  text-decoration: none;
+  color: #005143;
+}
+
+.vv-link-clean-single:hover {
+  text-decoration: none;
+  color: #005143;
+}
+
+
+/*Blog*/
+
+.blog-link {
+  color: inherit;
+}
+
+.blog-link:hover {
+  text-decoration: none;
+  color: #005143;
+}
+
+/*SERVICE OWN*/
+
+.number {
+  font-size: 160px;
+  line-height: 1;
+  color: lightgray;
+  font-family: 'Montserrat Bold';
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.number-white {
+  color: white;
+}
+
+.service-title {
+  color: #005143;
+  font-family: 'Montserrat Bold';
+  font-size: 170%;
+  margin: 0;
+  margin-top: -45px;
+}
+
+@media screen and (min-width: 1280px) {
+  .service-title {
+    margin-top: 0;
+    position: absolute;
+    top: 122px;
+  }
+
+  .number {
+    position: absolute;
+  }
+
+  .subcontainer-service-single {
+    margin-bottom: 200px !important;
+  }
+
+  .vv-link-clean {
+    flex-basis: 33%;
+    margin-bottom: 30px;
+  }
+}
+
+.subcontainer-service {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.service-image {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.only-tablet {
+  display: none;
+}
+
+.bilder {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bilder:hover {
+  color: #005143;
+  text-decoration: none;
+}
+
+.bilder:after {
+  content: '';
+  margin-left: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  background-image: url(/img/icons/arrowrightvitaverde.svg);
+  width: 12px;
+  height: 11px;
+  background-repeat: no-repeat;
+}
+
+.csb1-text:after {
+  content: '';
+  margin-left: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  background-image: url(/img/icons/arrowrightvitaverde.svg);
+  width: 12px;
+  height: 11px;
+  background-repeat: no-repeat;
+}
+
+.btn-2:after {
+  content: '';
+  margin-left: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  background-image: url(/img/icons/arrowright.svg);
+  width: 20px;
+  height: 19px;
+  background-repeat: no-repeat;
+}
+
+.img-service {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1280px) {
+  .only-mobile {
+    display: none;
+  }
+
+  .only-tablet {
+    display: block;
+  }
+
+  .lineleft::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #abcb59;
+    top: 18px;
+    right: -291px;
+    width: 250px;
+  }
+  .right {
+    right: 0;
+  }
+
+  .lineright::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #abcb59;
+    top: 18px;
+    left: -291px;
+    width: 250px;
+  }
+  .whitespace-bottom-30-contact {
+    padding-bottom: 30px;
+  }
+}
+
