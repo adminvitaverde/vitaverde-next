@@ -96,9 +96,7 @@ export default function Dienstleistungen({ angebote }) {
             {/*MOBILE*/}
             <section className="csse1-section-150 only-mobile">
                 <div className="container">
-                    {angebote.map(angebot => {
-                        console.log("BLOG INDEX", angebot);
-                        
+                    {angebote.map(angebot => {                        
                         return (
                             <div className="row whitespace-bottom-60" key={angebot.id}>
                                 <div className="col-xs-12 col-md-6 subcontainer-service">

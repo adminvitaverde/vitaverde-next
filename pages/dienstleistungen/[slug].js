@@ -87,5 +87,7 @@ export async function getStaticProps({ params }) {
 
     const API_URL = process.env.API_URL;
     const { data } = await axios.get(`${API_URL}/angebots?slug=${params.slug}`)
+    console.log("DATA", data);
+    
     return { props: { angebot: data }, unstable_revalidate: 10 }
 }
