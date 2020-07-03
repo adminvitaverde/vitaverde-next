@@ -24,7 +24,7 @@ export default function SingleDienstleistung({ angebot }) {
 
 
     return (
-        <Layout title="SEO Titel" description="SEO Beschreibung" ogImage={ogImage} isThemeLight={false}>
+        <Layout title={angebot[0].seo_titel} description={angebot[0].seo_beschreibung} ogImage={ogImage} isThemeLight={false}>
 
             <section className="csse1-section-150-gray">
             <div className="container">
