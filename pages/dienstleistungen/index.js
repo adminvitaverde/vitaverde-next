@@ -12,7 +12,7 @@ export default function Dienstleistungen({ angebote }) {
                 <div className="csl2-intro service">
                     <div className="csl2-inner">
                         <div className="csl2-content">
-                            <h1>Unser <span className="vv-title">Angebot</span></h1>
+                            <h1>Unser <span className="vv-title">AngebotTEST</span></h1>
                         </div>
                     </div>
                 </div>
