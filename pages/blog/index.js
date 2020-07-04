@@ -115,7 +115,7 @@ export default function Blog({ blogs }) {
 
 export async function getStaticProps() {
     const API_URL = process.env.API_URL;
-    const resBlogs = await axios.get(`${API_URL}/blogs?_sort=datum:DESC&publizieren_eq=true&_limit=2`)
+    const resBlogs = await axios.get(`${API_URL}/blogs?_sort=datum:DESC&publizieren_eq=true`)
     return { props: { blogs: resBlogs.data }, unstable_revalidate: 10 }
 }
 
