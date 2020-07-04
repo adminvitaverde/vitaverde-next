@@ -12,7 +12,9 @@ const MediaComponent = ({ block, contentState }) => {
 
 export default function ReadOnlyEditor({ content }) {
 
-    const markdownString = content;
+    const markdownString = content ? content : '';
+    console.log("CONTENT", content);
+    
     const rawData = mdToDraftjs(markdownString);
     const contentState = convertFromRaw(rawData);
     const decorator = createLinkDecorator();
