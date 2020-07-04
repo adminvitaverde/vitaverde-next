@@ -15,7 +15,7 @@ function Layout({ title, description, ogImage, isThemeLight, children }) {
                 <link rel="canonical" href={`https://www.domain.ch${router.asPath}`} />
                 <meta name="robots" content="index, follow" />
                 <meta name="googlebot" content="index,follow" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
                 <meta property="og:title" content={title} />
                 <meta property='og:description' content={description} />
                 <meta property="og:image" content={ogImage.url} />
