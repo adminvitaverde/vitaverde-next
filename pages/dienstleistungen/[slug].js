@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import Layout from '../../components/Layout';
 import Lightbox from 'react-image-lightbox';
+import { useRouter } from 'next/router';
 
 export default function SingleDienstleistung({ angebot }) {
     const IMAGE_URL = process.env.NEXT_PUBLIC_IMAGE_URL || '';
@@ -19,7 +20,11 @@ export default function SingleDienstleistung({ angebot }) {
         captions.push(angebot[0].bilder[i].alternativeText);
     }
 
-    console.log(images, captions, angebot[0]);
+    const router = useRouter()
+
+    if (router.isFallback) {
+        return <div>LOADING</div>
+    }
     
 
 
@@ -82,7 +87,7 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     };
 }
 

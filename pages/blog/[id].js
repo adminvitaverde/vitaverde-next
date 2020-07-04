@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Layout from '../../components/Layout';
+import { useRouter } from 'next/router';
 import ReadOnlyEditor from '../../components/ReadOnlyEditor';
 
 export default function SingleBlog({ blog }) {
@@ -7,6 +8,13 @@ export default function SingleBlog({ blog }) {
     const ogImage = {}
 
     const date = new Date(blog.datum) 
+
+
+    const router = useRouter()
+
+    if (router.isFallback) {
+        return <div>LOADING</div>
+    }
 
 
     return (
@@ -52,7 +60,7 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     };
 }
 
