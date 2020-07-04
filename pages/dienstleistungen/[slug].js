@@ -5,6 +5,12 @@ import Lightbox from 'react-image-lightbox';
 import { useRouter } from 'next/router';
 
 export default function SingleDienstleistung({ angebot }) {
+    const router = useRouter()
+
+    if (router.isFallback) {
+        return <div>LOADING</div>
+    }
+    
     const IMAGE_URL = process.env.NEXT_PUBLIC_IMAGE_URL || '';
     const ogImage = {}
 
@@ -20,11 +26,7 @@ export default function SingleDienstleistung({ angebot }) {
         captions.push(angebot[0].bilder[i].alternativeText);
     }
 
-    const router = useRouter()
-
-    if (router.isFallback) {
-        return <div>LOADING</div>
-    }
+    
     
 
 

@@ -4,22 +4,22 @@ import { useRouter } from 'next/router';
 import ReadOnlyEditor from '../../components/ReadOnlyEditor';
 
 export default function SingleBlog({ blog }) {
-    const IMAGE_URL = process.env.NEXT_PUBLIC_IMAGE_URL || '';
-    const ogImage = {}
-
-    const date = new Date(blog.datum) 
-
-
     const router = useRouter()
 
     if (router.isFallback) {
         return <div>LOADING</div>
     }
 
+    const IMAGE_URL = process.env.NEXT_PUBLIC_IMAGE_URL || '';
+    const ogImage = {}
+
+    const date = new Date(blog.datum) 
+
+
+    
 
     return (
         <Layout title={blog.seo_titel} description={blog.seo_beschreibung} ogImage={ogImage} isThemeLight={false}>
-
             <section className="csse1-section-150-gray">
                 <div className="container">
                     <div className='row'>
