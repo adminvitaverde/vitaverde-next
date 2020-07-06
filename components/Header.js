@@ -73,14 +73,20 @@ function Header({ isThemeLight }) {
                                             <a>Dienstleistungen</a>
                                         </Link>
                                     </li>
-                                    <li>
-                                        <Link href="/blog">
-                                            <a>Blog</a>
-                                        </Link>
-                                    </li>
+                                    
                                     <li>
                                         <Link href="/ueber-uns">
                                             <a>Über uns</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/team">
+                                            <a>Team</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/blog">
+                                            <a>Blog</a>
                                         </Link>
                                     </li>
                                     <li>

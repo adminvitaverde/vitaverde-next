@@ -1,17 +1,18 @@
 import Layout from '../components/Layout'
 import axios from 'axios'
 import CallToAction from '../components/CallToAction';
+import Member from '../components/Member';
 
-export default function About({ data }) {
+export default function Team({ data }) {
     const IMAGE_URL = process.env.NEXT_PUBLIC_IMAGE_URL || '';
     const ogImage = {}
     return (
-        <Layout title={data.seo_titel} description={data.beschreibung} ogImage={ogImage} isThemeLight={false}>
+        <Layout title="Vita Verde AG | Team" description="20 Jahre VITA VERDE! Am 1. März 1997 sind wir mit Vita Verde erfolgreich gestartet. Herzlich willkommen bei Vita Verde AG." ogImage={ogImage} isThemeLight={false}>
             <section>
                 <div className="csl2-intro about">
                     <div className="csl2-inner">
                         <div className="csl2-content about-title">
-                            <h1>Vita Verde</h1>
+                            <h1>Vita Verde <span className="vv-title">Team</span></h1>
                         </div>
                     </div>
                 </div>
@@ -56,6 +57,7 @@ export default function About({ data }) {
                     font-weight: 500;
                     font-size: 35px;
                     letter-spacing: 1.5px;
+                    text-align: center !imporant;
                 }
                 
                 @media screen and (max-width: 768px) {
@@ -97,16 +99,20 @@ export default function About({ data }) {
 
             <section className="csse1-section-150">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <h2 className=" vv-title-hello">{data.titel}</h2>
-                            <p className="vv-text-hello">{data.text}</p>
+                    <div className="row whitespace-bottom-30">
+                        <div className="col-xs-12">
+                            <h2 className="text-center vv-title-hello">Menschen die hinter Vita Verde stehen</h2>
                         </div>
+                    </div>
 
-                        <div className="col-md-6">
-                            <img className="css3-img" src={`${IMAGE_URL}${data.bild.url}`} />
-                        </div>
+                    <div className="row text-center team whitespace-bottom-60">
 
+                        {
+                            data.map(member => {
+                                return <Member key={member.id} bild={member.bild.url} name={member.name} titel={member.titel} beschreibung={member.beschreibung} telnummer={member.telnummer} email={member.email} />
+                            })
+                        }
+                        
                     </div>
                 </div>
             </section>
@@ -119,7 +125,7 @@ export default function About({ data }) {
             `}</style>
 
 
-            <CallToAction textUp={data.cta_oben} word={data.cta_unten} link={`/${data.cta_link}`} linkText={data.cta_button} />
+            <CallToAction textUp="" word="GARTEN" link="kontakt" linkText="TRAUMGARTEN PLANEN" />
 
 
 
@@ -131,7 +137,7 @@ export async function getStaticProps() {
 
     const API_URL = process.env.API_URL;
 
-    const resData = await axios.get(`${API_URL}/about`)
+    const resData = await axios.get(`${API_URL}/teams?_sort=position:ASC`)
 
     return { props: { data: resData.data }, unstable_revalidate: 10 }
 }
