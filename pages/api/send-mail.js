@@ -31,7 +31,7 @@ export default async (req, res) => {
             // send mail with defined transport object
             let info = await transporter.sendMail({
                 from: `"${vorname} ${name}" <${email}>`, // sender address
-                to: "admin@vitaverde.ch", // list of receivers
+                to: "info@vitaverde.ch", // list of receivers
                 subject: "Kontaktanfrage", // Subject line
                 text: `Anfrage von ${vorname} ${name}, Nachricht: ${message}, Telefon: ${telephone}, Email: ${email}`, // plain text body
                 html, // html body
