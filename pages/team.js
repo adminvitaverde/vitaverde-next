@@ -58,7 +58,7 @@ export default function Team({ data }) {
                     font-size: 35px;
                     letter-spacing: 1.5px;
                     text-align: center !imporant;
-                    
+
                 }
                 
                 @media screen and (max-width: 768px) {
@@ -117,13 +117,6 @@ export default function Team({ data }) {
                     </div>
                 </div>
             </section>
-
-            <style jsx>{` 
-            .vv-title-hello {
-                text-align: left;
-            }
-
-            `}</style>
 
 
             <CallToAction textUp="" word="GARTEN" link="kontakt" linkText="TRAUMGARTEN PLANEN" />
