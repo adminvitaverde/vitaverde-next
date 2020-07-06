@@ -58,6 +58,7 @@ export default function Team({ data }) {
                     font-size: 35px;
                     letter-spacing: 1.5px;
                     text-align: center !imporant;
+                    
                 }
                 
                 @media screen and (max-width: 768px) {
