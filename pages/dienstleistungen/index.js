@@ -173,7 +173,7 @@ export async function getStaticProps() {
 
     const API_URL = process.env.API_URL;
 
-    const resAngebot = await axios.get(`${API_URL}/angebots`)
+    const resAngebot = await axios.get(`${API_URL}/angebots?_sort=nummer:ASC`)
 
     return { props: { angebote: resAngebot.data }, unstable_revalidate: 10 }
 } 
