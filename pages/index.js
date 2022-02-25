@@ -13,7 +13,7 @@ export default function Home({ data, blogs }) {
         <div className="csl2-intro">
           <div className="csl2-inner">
             <div className="csl2-content">
-              <h1>Wir gestalten <span className="vv-title">Gärten</span> seit über 20 Jahren.</h1>
+              <h1>Wir gestalten <span className="vv-title">Gärten</span> seit über 25 Jahren.</h1>
             </div>
           </div>
         </div>
