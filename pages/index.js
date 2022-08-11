@@ -159,7 +159,7 @@ export default function Home({ data, blogs }) {
         </div>
       </section>
 
-      <CallToAction textUp={data.cta_oben} word={data.cta_unten} link={`/${data.link}`} linkText={data.cta_button} />
+      <CallToAction textUp={data.cta_oben} word={data.cta_unten} link={`/${data.cta_link}`} linkText={data.cta_button} />
 
     </Layout>
   )
